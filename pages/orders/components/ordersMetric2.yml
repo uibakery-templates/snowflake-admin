@@ -15,10 +15,11 @@ styles:
       w: 13
       h: 27
 properties:
-  data: |-
-    {{actions.loadCustomers.data}}.map((customer) => ({
-      ...customer,
-      orderCount: {{actions.loadOrders.data}}.filter((order) => order.CUSTOMER_ID === customer.CUSTOMER_ID).length,
+  data: >-
+    Object.entries(Object.groupBy({{actions.loadOrders.data}}, ({ CUSTOMER_ID })
+    => CUSTOMER_ID)).map(([CUSTOMER_ID, { length }]) => ({
+      CUSTOMER_ID,
+      orderCount: length,
     }));
   name: ordersMetric2
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
@@ -28,22 +29,22 @@ properties:
   operation: avg
   groupType: not_group
   showLoading:
-    value: false
-    dataValue: '{{actions.loadCustomers.loading}} || {{actions.loadOrders.loading}}'
     withData: true
+    dataValue: 'false'
+    value: false
 actions: {}
 slots:
   - id: '16998708671540.9537097656717755'
     name: metricField
     children:
-      - id: '16998711919660.29292530019895713'
+      - id: '17011916998920.7446868955983543'
         definitionId: atomicNumber
         parentSlotId: '16998708671540.9537097656717755'
         styles: {}
         properties:
           name: atomicNumber5
           prop: orderCount
-          primaryKey: false
+          primaryKey: true
           __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
             - xl
             - xs

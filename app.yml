@@ -20,4 +20,5 @@ appSettings:
     defaultData: '{}'
   actions: {}
   gridVersion: 2
+  density: default
 internalType: project

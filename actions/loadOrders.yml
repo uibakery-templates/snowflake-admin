@@ -3,13 +3,10 @@ kind: workflow
 name: loadOrders
 nameConfigured: true
 steps:
-  - id: '16996172611280.13038501977891914'
+  - id: '17011892608090.8356441097971219'
     type: LOAD_COLLECTION
     name: load
     params:
-      - type: datasourceId
-        value: UIBAKERY SNOWFLAKE ADMIN database
-        valueType: string
       - type: resourceId
         value: ORDERS
         valueType: string
@@ -44,9 +41,13 @@ steps:
       - type: mapperEnabled
         value: false
         valueType: custom
+      - type: datasourceId
+        value: '[Sample] Snowflake DB'
+        valueType: custom
     level: 0
     fallthroughError: false
     isChanged: true
+    nameConfigured: true
 mode: manual
 modeConfigured: false
 config:

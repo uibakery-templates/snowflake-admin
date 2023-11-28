@@ -33,5 +33,17 @@ properties:
     value: true
     dataValue: 'true'
     withData: false
+  containerStyles:
+    withData: false
+    dataValue: |-
+      {
+        padding: 'default',
+        shadow: 'default',
+        border: 'default'
+      }
+    value:
+      padding: default
+      shadow: default
+      border: default
 actions: {}
 slots: []

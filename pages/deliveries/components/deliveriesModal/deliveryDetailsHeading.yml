@@ -1,4 +1,4 @@
-id: '16996187365180.6231518494816821'
+id: '16996198501990.928236949511688'
 definitionId: heading
 styles:
   xl:
@@ -18,13 +18,13 @@ styles:
       w: 24
       h: 10
 properties:
-  name: heading4
-  text: Product Details
+  name: deliveryDetailsHeading
+  text: Delivery Details
   verticalAlignment: middle
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs
-parentSlotId: '16996187365180.4208199998772493'
+parentSlotId: '16996198501990.9857255055893883'
 index: 0
 actions: {}
 slots: []
