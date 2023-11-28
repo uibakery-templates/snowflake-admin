@@ -15,7 +15,7 @@ styles:
       w: 24
       h: 74
 properties:
-  name: ordersTree
+  name: ordersByCutomersTree
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs

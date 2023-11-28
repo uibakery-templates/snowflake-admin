@@ -25,9 +25,9 @@ slots:
             name: content
             children:
               - components/ordersMetric.yml
-              - components/ordersChart2.yml
-              - components/ordersTree.yml
-              - components/customersChart.yml
-              - components/ordersMetric4.yml
+              - components/ordersTotalsChart.yml
+              - components/ordersByCutomersTree.yml
+              - components/ordersByCustomersChart.yml
+              - components/orderDetailsMetric2.yml
               - components/ordersMetric2.yml
-              - components/ordersMetric3.yml
+              - components/orderDetailsMetric.yml

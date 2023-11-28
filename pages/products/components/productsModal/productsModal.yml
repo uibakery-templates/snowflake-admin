@@ -12,7 +12,7 @@ styles:
     modalSize:
       widthValue: 60
       widthUnit: '%'
-      heightValue: 61
+      heightValue: 60
       heightUnit: '%'
       minWidthValue: 0
       minWidthUnit: px
@@ -45,11 +45,11 @@ slots:
   - id: '16996187365180.4208199998772493'
     name: header
     children:
-      - heading4.yml
+      - productDetailsHeading.yml
   - id: '16996187365180.33288284040273286'
     name: body
     children:
-      - productstableDetail.yml
+      - productDetails.yml
   - id: '16996187365180.020051456790246336'
     name: footer
     children: []

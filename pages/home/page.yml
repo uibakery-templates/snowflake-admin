@@ -25,4 +25,4 @@ slots:
             bindings: {}
             children:
               - components/overviewCard/overviewCard.yml
-              - components/card/card.yml
+              - components/customerCard/customerCard.yml

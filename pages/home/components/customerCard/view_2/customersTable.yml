@@ -40,7 +40,7 @@ properties:
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs
-  title: Customers
+  title: ''
   showLoading:
     value: false
     dataValue: '{{actions.loadCustomers.loading}} || {{actions.onSearchChange.loading}}'
@@ -153,7 +153,7 @@ slots:
           __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
             - xl
             - xs
-          width: 120
+          width: '60'
           filter: true
         index: 1
         slots: []
@@ -170,7 +170,7 @@ slots:
           __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
             - xl
             - xs
-          width: 120
+          width: '60'
           filter: true
         index: 2
         slots: []
@@ -239,7 +239,7 @@ slots:
           __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
             - xl
             - xs
-          width: 120
+          width: '90'
           filter: true
         index: 6
         slots: []
@@ -332,7 +332,7 @@ slots:
           __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
             - xl
             - xs
-          width: 120
+          width: '60'
           filter: true
           mappedValue: '{{value}}'
           mappedColor: info-dark

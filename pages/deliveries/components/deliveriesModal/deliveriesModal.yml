@@ -45,11 +45,11 @@ slots:
   - id: '16996198501990.9857255055893883'
     name: header
     children:
-      - heading6.yml
+      - deliveryDetailsHeading.yml
   - id: '16996198501990.01065920406938492'
     name: body
     children:
-      - deliveriestableDetail.yml
+      - deliveryDetails.yml
   - id: '16996198501990.24579283597670476'
     name: footer
     children: []

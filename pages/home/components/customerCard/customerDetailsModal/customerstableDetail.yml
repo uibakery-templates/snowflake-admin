@@ -41,6 +41,18 @@ properties:
     - xl
     - xs
   title: ''
+  containerStyles:
+    withData: false
+    dataValue: |-
+      {
+        padding: 'default',
+        shadow: 'default',
+        border: 'default'
+      }
+    value:
+      padding: default
+      shadow: default
+      border: default
 actions: {}
 slots:
   - id: '16996089893140.6004658429701879'
@@ -258,6 +270,10 @@ slots:
           width: 120
           filter: true
           mappedValue: '{{value}}'
+          allowResetValue:
+            value: true
+            dataValue: 'true'
+            withData: false
         index: 7
         slots: []
       - id: '17000629883420.47998947787097057'
