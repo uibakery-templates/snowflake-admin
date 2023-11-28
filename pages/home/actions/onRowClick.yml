@@ -1,0 +1,34 @@
+id: '16996088853760.7560121167314786'
+kind: workflow
+name: onRowClick
+nameConfigured: true
+steps:
+  - id: '16996089379940.18998817549363478'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: '{{ui.customerDetailsModal.open()}}'
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.onRowClick.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.onRowClick.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.onRowClick.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+index: 5

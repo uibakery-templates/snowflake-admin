@@ -1,0 +1,88 @@
+id: '16998911615400.10508151506622898'
+kind: workflow
+name: onSearchChange
+nameConfigured: true
+steps:
+  - id: '16998911688640.8356129080124615'
+    type: customSQLQuery
+    name: query
+    params:
+      - type: query
+        value: |-
+          SELECT
+            *
+          from
+            CUSTOMERS
+          WHERE
+            (FIRST_NAME LIKE {{'%'+ui.input.value+'%'}})
+            or (LAST_NAME LIKE {{'%'+ui.input.value+'%'}});
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: datasourceId
+        value: UIBAKERY SNOWFLAKE ADMIN database
+        valueType: custom
+        mustSelectFirst: true
+      - type: preparedQuery
+        value: |-
+          SELECT
+            *
+          from
+            CUSTOMERS
+          WHERE
+            (FIRST_NAME LIKE ?)
+            or (LAST_NAME LIKE ?);
+        valueType: interpolatedValue
+      - type: preparedQueryParams
+        value:
+          - __UI_BAKERY__FORMAT_IF_DATE__('%'+ui.input.value+'%')
+          - __UI_BAKERY__FORMAT_IF_DATE__('%'+ui.input.value+'%')
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: stepVersion
+        value: 2
+        valueType: custom
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '16998915932070.8243908457497469'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: '{{ui.customersTable.setData(data)}}'
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.onSearchChange.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.onSearchChange.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.onSearchChange.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+index: 6

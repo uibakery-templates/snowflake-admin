@@ -1,0 +1,121 @@
+id: '16996198501990.23927189953706463'
+definitionId: detail
+parentSlotId: '16996198501990.01065920406938492'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 93
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 93
+properties:
+  dynamicFields:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "full_name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  entity: '{{ui.deliveriesTable.clickedRow.data}}'
+  name: deliveriestableDetail
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Deliveriestable
+  heightMode: fixed
+actions: {}
+slots:
+  - id: '16996198501990.11768338771085829'
+    name: structure
+    children:
+      - id: '17001234386710.5513381865884421'
+        definitionId: atomicNumber
+        parentSlotId: '16996198501990.11768338771085829'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber17
+          prop: DELIVERY_ID
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          filter: true
+        index: 0
+        slots: []
+      - id: '17001234386710.9123539695896472'
+        definitionId: atomicNumber
+        parentSlotId: '16996198501990.11768338771085829'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber18
+          prop: ORDER_ID
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          filter: true
+        index: 1
+        slots: []
+      - id: '17001234386710.828346334737569'
+        definitionId: atomicDateTime
+        parentSlotId: '16996198501990.11768338771085829'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicDateTime3
+          prop: DELIVERY_DATE
+          primaryKey: false
+          timeFormat:
+            value: HH:mm:ss
+            dataValue: HH:mm
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        index: 2
+        slots: []
+      - id: '17001234386710.4594148732770589'
+        definitionId: atomicNumber
+        parentSlotId: '16996198501990.11768338771085829'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber19
+          prop: STATUS_ID
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          filter: true
+        index: 3
+        slots: []

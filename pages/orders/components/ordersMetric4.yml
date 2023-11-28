@@ -1,0 +1,55 @@
+id: '16997235557760.5001840329783829'
+definitionId: metric
+parentSlotId: '16995304860770.38053567007882494'
+styles:
+  xl:
+    gridItem:
+      x: 5
+      y: 125
+      w: 7
+      h: 41
+  xs:
+    gridItem:
+      x: 11
+      y: 102
+      w: 13
+      h: 27
+properties:
+  data: '{{actions.loadOrderDetails.data}}'
+  name: ordersMetric4
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Average product quantity per order
+  operation: avg
+  groupType: not_group
+  showLoading:
+    value: false
+    dataValue: '{{actions.loadOrderDetails.loading}}'
+    withData: true
+  showGroupField: false
+actions: {}
+slots:
+  - id: '16997235557760.4186787813521968'
+    name: metricField
+    children:
+      - id: '16997235914830.5634298366702613'
+        definitionId: atomicNumber
+        parentSlotId: '16997235557760.4186787813521968'
+        styles: {}
+        properties:
+          name: atomicNumber
+          prop: QUANTITY
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          fraction: 3
+        index: 0
+        slots: []
+  - id: '16997235557760.13778767380608614'
+    name: additionalField
+    children: []
+  - id: '16997235558610.04779647120647801'
+    name: groupByField
+    children: []

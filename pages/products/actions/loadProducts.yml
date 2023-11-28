@@ -1,0 +1,67 @@
+id: '16996138251620.1381775022793379'
+kind: workflow
+name: loadProducts
+nameConfigured: true
+steps:
+  - id: '16996138401020.09747457545330684'
+    type: LOAD_COLLECTION
+    name: load
+    params:
+      - type: datasourceId
+        value: UIBAKERY SNOWFLAKE ADMIN database
+        valueType: string
+      - type: resourceId
+        value: PRODUCTS
+        valueType: string
+      - type: filters
+        value: []
+        valueType: custom
+      - type: ordering
+        value:
+          limit:
+            value: ''
+          offset:
+            value: ''
+          orderBy:
+            value: ''
+          orderDirection:
+            value: asc
+        valueType: custom
+      - type: additionalParams
+        value:
+          - name: ''
+            value: ''
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '16995289137750.6080597777014727'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.loadProducts.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.loadProducts.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.loadProducts.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+index: 7

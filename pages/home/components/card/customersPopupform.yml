@@ -1,0 +1,270 @@
+id: '16997003187160.17327332955479302'
+definitionId: popupForm
+parentSlotId: '16998773436070.30835773092530694'
+styles:
+  xl:
+    gridItem:
+      x: 19
+      y: 0
+      w: 5
+      h: 10
+    buttonIconPlacement: left
+  xs:
+    gridItem:
+      x: 18
+      y: 0
+      w: 6
+      h: 10
+properties:
+  dynamicFields:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "full_name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  entity: ''
+  name: customersPopupform
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Customer
+  buttonIcon:
+    value: plus
+    dataValue: star-outline
+    withData: false
+  buttonText: Create
+  showSuccessMessage: true
+  showErrorMessage: true
+  closeOnEsc: true
+  closeOnBackdrop: true
+actions:
+  submitEvent:
+    - action: '16996265585920.4373256608976672'
+      paramCode: ''
+      blockPageLoad: false
+      index: 0
+  init: []
+  popupClick: []
+  changeEvent: []
+  customButtonClick: []
+  popupOpen: []
+  popupClose: []
+slots:
+  - id: '16997003187160.9508685788596858'
+    name: structure
+    children:
+      - id: '17000645791830.016822684156489576'
+        definitionId: atomicString
+        parentSlotId: '16997003187160.9508685788596858'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString15
+          prop: FIRST_NAME
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          required:
+            value: true
+            dataValue: 'false'
+            withData: false
+        index: 0
+        slots: []
+      - id: '17000645791830.10058561159756985'
+        definitionId: atomicString
+        parentSlotId: '16997003187160.9508685788596858'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString16
+          prop: LAST_NAME
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          required:
+            value: true
+            dataValue: 'false'
+            withData: false
+        index: 1
+        slots: []
+      - id: '17000645791830.5639551345645133'
+        definitionId: atomicString
+        parentSlotId: '16997003187160.9508685788596858'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString17
+          prop: EMAIL
+          primaryKey: false
+          inputType: email
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          required:
+            value: true
+            dataValue: 'false'
+            withData: false
+        index: 2
+        slots: []
+      - id: '17000645791830.012786095330854952'
+        definitionId: atomicString
+        parentSlotId: '16997003187160.9508685788596858'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString18
+          prop: PHONE
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 3
+        slots: []
+      - id: '17000645791830.42904651109548175'
+        definitionId: atomicString
+        parentSlotId: '16997003187160.9508685788596858'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString19
+          prop: ADDRESS
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 4
+        slots: []
+      - id: '17000645791830.051477597905627226'
+        definitionId: atomicString
+        parentSlotId: '16997003187160.9508685788596858'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString22
+          prop: CITY
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 5
+        slots: []
+      - id: '17000645791830.06937445537639375'
+        definitionId: atomicSelect
+        parentSlotId: '16997003187160.9508685788596858'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicSelect3
+          prop: STATE
+          primaryKey: false
+          options:
+            value:
+              - value: CT
+                color: primary
+                __UIBAKERY__SYSTEM_ID__: '17000645791830.8595702335963169'
+              - value: VI
+                color: success
+                __UIBAKERY__SYSTEM_ID__: '17000645791830.40753754668799336'
+              - value: PA
+                color: warning
+                __UIBAKERY__SYSTEM_ID__: '17000645791830.23372215756858683'
+              - value: MH
+                color: danger
+                __UIBAKERY__SYSTEM_ID__: '17000645791830.1252493204395453'
+              - value: TX
+                color: info
+                __UIBAKERY__SYSTEM_ID__: '17000645791830.12104487662441055'
+              - value: NV
+                color: basic
+                __UIBAKERY__SYSTEM_ID__: '17000645791830.04566493134956273'
+              - value: MS
+                color: primary-light
+                __UIBAKERY__SYSTEM_ID__: '17000645791830.14531352394113117'
+              - value: WI
+                color: success-light
+                __UIBAKERY__SYSTEM_ID__: '17000645791830.24910152763004145'
+              - value: MO
+                color: warning-light
+                __UIBAKERY__SYSTEM_ID__: '17000645791830.33166829409016185'
+              - value: SC
+                color: danger-light
+                __UIBAKERY__SYSTEM_ID__: '17000645791830.3502317902272647'
+            dataValue: >-
+              {{actions.loadCustomers.data}}.map((c) => ({ value: c.STATE,
+              title: c.STATE }));
+            withData: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          mappedValue: ''
+          mappedColor: info-light
+        index: 6
+        slots: []
+      - id: '17000645791840.13748984567223999'
+        definitionId: atomicNumber
+        parentSlotId: '16997003187160.9508685788596858'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber21
+          prop: ZIP_CODE
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 7
+        slots: []
+      - id: '17000645791840.9708250511756236'
+        definitionId: atomicNumber
+        parentSlotId: '16997003187160.9508685788596858'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber22
+          prop: LATITUDE
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 8
+        slots: []
+      - id: '17000645791840.8428766785434385'
+        definitionId: atomicNumber
+        parentSlotId: '16997003187160.9508685788596858'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber23
+          prop: LONGITUDE
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 9
+        slots: []

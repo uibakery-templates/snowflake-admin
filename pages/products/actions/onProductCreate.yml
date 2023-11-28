@@ -1,0 +1,57 @@
+id: '16996286332130.19307539295029286'
+kind: workflow
+name: onProductCreate
+nameConfigured: true
+steps:
+  - id: '16996286397510.6464075262587294'
+    type: CREATE_ENTITY
+    name: create
+    params:
+      - type: datasourceId
+        value: UIBAKERY SNOWFLAKE ADMIN database
+        valueType: string
+      - type: resourceId
+        value: PRODUCTS
+        valueType: string
+      - type: entity
+        value:
+          mode: custom
+          valueByMode:
+            structured: {}
+            custom: '{{ui.productsTable.newRow.data}}'
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '16995289137750.6080597777014727'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.onProductCreate.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.onProductCreate.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.onProductCreate.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+index: 9

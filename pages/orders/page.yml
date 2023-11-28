@@ -1,0 +1,33 @@
+id: '16995304860760.47680304810821506'
+name: Orders
+url: orders
+roleIds: []
+disableInMenu: false
+parentPageId: null
+index: 1
+slots:
+  - id: '16995304860760.19521958342983292'
+    name: content
+    children:
+      - id: '16995304860760.06067938030144826'
+        definitionId: grid
+        parentSlotId: '16995304860760.19521958342983292'
+        styles: {}
+        properties:
+          name: dashboard
+          pageTitle: '{{app.name}} - {{activeRoute.name}}'
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots:
+          - id: '16995304860770.38053567007882494'
+            name: content
+            children:
+              - components/ordersMetric.yml
+              - components/ordersChart2.yml
+              - components/ordersTree.yml
+              - components/customersChart.yml
+              - components/ordersMetric4.yml
+              - components/ordersMetric2.yml
+              - components/ordersMetric3.yml

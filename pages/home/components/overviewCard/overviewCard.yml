@@ -1,0 +1,36 @@
+id: '16995194319010.13014600091923834'
+definitionId: cardNew
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 0
+      w: 11
+      h: 166
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 186
+properties:
+  name: overviewCard
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  heightMode: fixed
+  showHeader: true
+actions: {}
+slots:
+  - id: '16995194319010.30764864124726876'
+    name: header
+    children:
+      - heading.yml
+  - id: '16995194319010.8917146684903667'
+    name: footer
+    children: []
+  - id: '16995194319010.8632910509810756'
+    name: views
+    children:
+      - view_1/view_1.yml

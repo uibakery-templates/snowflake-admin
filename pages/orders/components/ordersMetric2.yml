@@ -1,0 +1,58 @@
+id: '16998708671540.03168846208751419'
+definitionId: metric
+parentSlotId: '16995304860770.38053567007882494'
+styles:
+  xl:
+    gridItem:
+      x: 5
+      y: 82
+      w: 7
+      h: 43
+  xs:
+    gridItem:
+      x: 11
+      y: 129
+      w: 13
+      h: 27
+properties:
+  data: |-
+    {{actions.loadCustomers.data}}.map((customer) => ({
+      ...customer,
+      orderCount: {{actions.loadOrders.data}}.filter((order) => order.CUSTOMER_ID === customer.CUSTOMER_ID).length,
+    }));
+  name: ordersMetric2
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Average order count by customer
+  operation: avg
+  groupType: not_group
+  showLoading:
+    value: false
+    dataValue: '{{actions.loadCustomers.loading}} || {{actions.loadOrders.loading}}'
+    withData: true
+actions: {}
+slots:
+  - id: '16998708671540.9537097656717755'
+    name: metricField
+    children:
+      - id: '16998711919660.29292530019895713'
+        definitionId: atomicNumber
+        parentSlotId: '16998708671540.9537097656717755'
+        styles: {}
+        properties:
+          name: atomicNumber5
+          prop: orderCount
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          fraction: 3
+        index: 0
+        slots: []
+  - id: '16998708671540.2819730882000886'
+    name: additionalField
+    children: []
+  - id: '16998708672790.6415284479411556'
+    name: groupByField
+    children: []

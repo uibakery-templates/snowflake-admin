@@ -1,0 +1,66 @@
+id: '17000631362170.8752637125268057'
+kind: workflow
+name: loadDeliveries
+nameConfigured: true
+steps:
+  - id: '17000631400270.7178978063664712'
+    type: LOAD_COLLECTION
+    name: load
+    params:
+      - type: datasourceId
+        value: UIBAKERY SNOWFLAKE ADMIN database
+        valueType: string
+      - type: resourceId
+        value: DELIVERIES
+        valueType: string
+      - type: filters
+        value: []
+        valueType: custom
+      - type: ordering
+        value:
+          limit:
+            value: ''
+          offset:
+            value: ''
+          orderBy:
+            value: DELIVERY_DATE
+          orderDirection:
+            value: asc
+        valueType: custom
+      - type: additionalParams
+        value:
+          - name: ''
+            value: ''
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.loadDeliveries.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.loadDeliveries.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.loadDeliveries.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: true
+index: 0

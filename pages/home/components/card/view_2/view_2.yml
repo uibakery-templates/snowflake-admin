@@ -1,0 +1,16 @@
+id: '16998773436070.2648776796077268'
+definitionId: view
+styles: {}
+properties:
+  name: view_2
+  viewName: view_1
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+parentSlotId: '16998773436070.35565687163975634'
+index: 0
+slots:
+  - id: '16998773436070.05259697996128865'
+    name: content
+    children:
+      - customersTable.yml

@@ -1,0 +1,18 @@
+id: '16995194319010.6977694787819833'
+definitionId: view
+styles: {}
+properties:
+  name: view_1
+  viewName: view_1
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+parentSlotId: '16995194319010.8632910509810756'
+index: 0
+slots:
+  - id: '16995194319010.9755403512795566'
+    name: content
+    children:
+      - homePageBubbleMap.yml
+      - deliveryChart3.yml
+      - deliveryChart2.yml

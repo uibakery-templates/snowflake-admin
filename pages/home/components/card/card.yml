@@ -1,0 +1,37 @@
+id: '16998773436070.6239364086806591'
+definitionId: cardNew
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 11
+      y: 0
+      w: 13
+      h: 166
+  xs:
+    gridItem:
+      x: 0
+      y: 186
+      w: 24
+      h: 124
+properties:
+  name: card
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+actions: {}
+slots:
+  - id: '16998773436070.30835773092530694'
+    name: header
+    children:
+      - customerDetailsModal/customerDetailsModal.yml
+      - customersPopupform.yml
+      - heading3.yml
+      - input.yml
+  - id: '16998773436070.7690763390876079'
+    name: footer
+    children: []
+  - id: '16998773436070.35565687163975634'
+    name: views
+    children:
+      - view_2/view_2.yml

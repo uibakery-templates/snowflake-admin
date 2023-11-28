@@ -1,0 +1,32 @@
+id: '16995289137750.6080597777014727'
+name: Products
+url: products
+roleIds: []
+disableInMenu: false
+parentPageId: null
+index: 2
+slots:
+  - id: '16995289137750.11572846192106279'
+    name: content
+    children:
+      - id: '16995289137750.5147614561605731'
+        definitionId: grid
+        parentSlotId: '16995289137750.11572846192106279'
+        styles: {}
+        properties:
+          name: overview
+          pageTitle: '{{app.name}} - {{activeRoute.name}}'
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots:
+          - id: '16995289137750.7457703352573224'
+            name: content
+            children:
+              - components/productsTable.yml
+              - components/productsChart2.yml
+              - components/productsModal/productsModal.yml
+              - components/productChart.yml
+              - components/productMetric.yml
+              - components/productMetric2.yml

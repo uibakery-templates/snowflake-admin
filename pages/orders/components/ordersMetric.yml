@@ -1,0 +1,55 @@
+id: '16996177368670.18109008627790768'
+definitionId: metric
+parentSlotId: '16995304860770.38053567007882494'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 82
+      w: 5
+      h: 43
+  xs:
+    gridItem:
+      x: 0
+      y: 102
+      w: 11
+      h: 27
+properties:
+  data: '{{actions.loadOrders.data}}'
+  name: ordersMetric
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Total orders
+  operation: count
+  groupType: not_group
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadOrders.loading}}'
+    value: false
+  additionalOperation: avg
+  showGroupField: true
+actions: {}
+slots:
+  - id: '16996177368670.8023179322010978'
+    name: metricField
+    children:
+      - id: '16998718321110.9127717871088485'
+        definitionId: atomicNumber
+        parentSlotId: '16996177368670.8023179322010978'
+        styles: {}
+        properties:
+          name: atomicNumber10
+          prop: ORDER_ID
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots: []
+  - id: '16996177368670.7460846145409712'
+    name: additionalField
+    children: []
+  - id: '16996177369800.6379231784411383'
+    name: groupByField
+    children: []

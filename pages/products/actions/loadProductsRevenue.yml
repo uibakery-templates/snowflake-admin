@@ -1,0 +1,104 @@
+id: '16999036108940.4408089208896824'
+kind: workflow
+name: loadProductsRevenue
+nameConfigured: true
+steps:
+  - id: '16999064808980.21721636846472037'
+    type: executeAction
+    name: execute
+    params:
+      - type: action
+        value: '16996138251620.1381775022793379'
+        valueType: string
+      - type: isActionsLibraryCall
+        value: false
+        valueType: string
+      - type: customParams
+        value: return {{data}};
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+  - id: '16999064910990.016649494454488156'
+    type: executeAction
+    name: execute2
+    params:
+      - type: action
+        value: '16996336752970.6844293068346621'
+        valueType: string
+      - type: isActionsLibraryCall
+        value: false
+        valueType: string
+      - type: customParams
+        value: return {{data}};
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '16999063507040.8101306869411204'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: |-
+          {{actions.loadProducts.data}}.map((product) => ({
+            id: `Product ID: ${product.PRODUCT_ID}`,
+            ...{{actions.loadOrderDetails.data}}.filter((detail) => product.PRODUCT_ID === detail.PRODUCT_ID).reduce(
+              (acc, detail) => {
+                acc.boughtQuantity += detail.QUANTITY;
+                acc.revenue += detail.QUANTITY * product.UNIT_PRICE;
+                return acc;
+              },
+              {
+                boughtQuantity: 0,
+                revenue: 0,
+              }
+            ),
+          }));
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '16995289137750.6080597777014727'
+parentId: null
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.loadProductsRevenue.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.loadProductsRevenue.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.loadProductsRevenue.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+index: 10

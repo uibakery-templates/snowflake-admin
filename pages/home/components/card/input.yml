@@ -1,0 +1,36 @@
+id: '16998910373790.053400412896594585'
+definitionId: stringEdit
+parentSlotId: '16998773436070.30835773092530694'
+styles:
+  xl:
+    gridItem:
+      x: 12
+      y: 0
+      w: 7
+      h: 10
+  xs:
+    gridItem:
+      x: 9
+      y: 0
+      w: 9
+      h: 10
+properties:
+  name: input
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  iconPlacement: start
+  icon:
+    value: search
+    dataValue: star-outline
+    withData: false
+  labelConfig:
+    text: ''
+    position: horizontal
+    align: left
+actions:
+  valueChange:
+    - action: '16998911615400.10508151506622898'
+      paramCode: ''
+      index: 0
+slots: []

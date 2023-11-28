@@ -1,0 +1,23 @@
+storeItemList: []
+metadata:
+  favicon: ''
+  code: |-
+    <style>
+      .horizontalMenu {
+        padding-left: 8px;
+      }
+
+      .horizontalMenu .base-image__container,
+      .horizontalMenu .base-image__container .base-image__img {
+        min-height: 20px;
+        min-width: 80px;
+      }
+    </style>
+  title: Snowflake Admin
+  description: ''
+appSettings:
+  properties:
+    defaultData: '{}'
+  actions: {}
+  gridVersion: 2
+internalType: project

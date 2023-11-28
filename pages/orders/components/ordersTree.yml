@@ -1,0 +1,127 @@
+id: '16997092889250.4837010266043935'
+definitionId: tree
+parentSlotId: '16995304860770.38053567007882494'
+styles:
+  xl:
+    gridItem:
+      x: 12
+      y: 82
+      w: 12
+      h: 84
+  xs:
+    gridItem:
+      x: 0
+      y: 225
+      w: 24
+      h: 74
+properties:
+  name: ordersTree
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  data: |-
+    {{actions.loadCustomers.data}}.map((customer) => {
+      const ordersByCustomer = {{actions.loadOrders.data}}.filter((order) => order.CUSTOMER_ID === customer.CUSTOMER_ID);
+
+      const orderDetailsForOrder = {{actions.loadOrderDetails.data}}.filter((details) => ordersByCustomer.find((order) => details.ORDER_ID === order.ORDER_ID));
+
+      return {
+        data: {
+          name: [customer.FIRST_NAME, customer.LAST_NAME].join(' '),
+          quantity: orderDetailsForOrder.reduce((acc, details) => acc + details.QUANTITY, 0),
+        },
+        children: ordersByCustomer.map((order) => {
+          const orderDetailsForOrder = {{actions.loadOrderDetails.data}}.filter((details) => details.ORDER_ID === order.ORDER_ID);
+
+          return {
+            data: {
+              name: `Order ID: ${order.ORDER_ID}`,
+              date: new Date(order.ORDER_DATE).toDateString(),
+              total: order.TOTAL_AMOUNT,
+            },
+            children: orderDetailsForOrder.map((details) => {
+              return {
+                data: {
+                  name: `Product ID: ${details.PRODUCT_ID}`,
+                  quantity: details.QUANTITY,
+                },
+              };
+            }),
+          };
+        }),
+      };
+    });
+  columns:
+    value:
+      - name: Name
+        id: name
+        primaryKey: true
+        width: '70'
+        __UIBAKERY__SYSTEM_ID__: '1'
+      - id: quantity
+        name: Quantity
+        primaryKey: false
+        width: '25'
+        __UIBAKERY__SYSTEM_ID__: '16997178712930.5665825299731466'
+      - name: Order Date
+        id: date
+        primaryKey: false
+        width: '35'
+        __UIBAKERY__SYSTEM_ID__: '3'
+      - name: Order Total
+        id: total
+        primaryKey: false
+        width: '35'
+        __UIBAKERY__SYSTEM_ID__: '4'
+    dataValue: |-
+      [
+        {
+          name: 'Name',
+          id: 'name',
+          primaryKey: true,
+          width: 50,
+        },
+        {
+          name: 'Size',
+          id: 'size',
+          primaryKey: false,
+          width: 50,
+        },
+        {
+          name: 'Kind',
+          id: 'kind',
+          primaryKey: false,
+          width: 50,
+        },
+        {
+          name: 'Items',
+          id: 'items',
+          primaryKey: false,
+          width: 50,
+        },
+      ]
+    withData: false
+  showNumberOfChildren: false
+  heightMode: fixed
+  containerStyles:
+    withData: false
+    dataValue: |-
+      {
+        padding: 'default',
+        shadow: 'default',
+        border: 'default'
+      }
+    value:
+      padding: default
+      shadow: default
+      border: default
+  title: Orders by Customers
+  showTreeHeader: true
+  showLoading:
+    value: false
+    dataValue: >-
+      {{actions.loadCustomers.loading}} || {{actions.loadOrders.loading}} ||
+      {{actions.loadOrderDetails.loading}}
+    withData: true
+actions: {}
+slots: []

@@ -1,0 +1,57 @@
+id: '16996288059150.7623730851420472'
+kind: workflow
+name: onDeliveryCreate
+nameConfigured: true
+steps:
+  - id: '16996288108960.09113860083564118'
+    type: CREATE_ENTITY
+    name: create
+    params:
+      - type: datasourceId
+        value: UIBAKERY SNOWFLAKE ADMIN database
+        valueType: string
+      - type: resourceId
+        value: DELIVERY
+        valueType: string
+      - type: entity
+        value:
+          mode: custom
+          valueByMode:
+            structured: {}
+            custom: '{{ui.deliveriesTable.newRow.data}}'
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '16996198501970.3362767496195198'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.onDeliveryCreate.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.onDeliveryCreate.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.onDeliveryCreate.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+index: 12

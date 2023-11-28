@@ -1,0 +1,55 @@
+id: '16996198501990.1761144580638787'
+definitionId: metric
+parentSlotId: '16996198501980.11220074410258651'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 0
+      w: 9
+      h: 32
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 27
+properties:
+  data: '{{actions.loadDeliveries.data}}'
+  name: deliveriesMetric
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Total Deliveries
+  operation: count
+  groupType: not_group
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadDeliveries.loading}}'
+    value: false
+  additionalOperation: show_last
+  showGroupField: true
+actions: {}
+slots:
+  - id: '16996198501990.6591386075781303'
+    name: metricField
+    children:
+      - id: '17000632524970.6664370745544816'
+        definitionId: atomicNumber
+        parentSlotId: '16996198501990.6591386075781303'
+        styles: {}
+        properties:
+          name: atomicNumber15
+          prop: DELIVERY_ID
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots: []
+  - id: '16996198501990.3194643055916502'
+    name: additionalField
+    children: []
+  - id: '16996198501990.8141637039813332'
+    name: groupByField
+    children: []

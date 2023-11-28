@@ -1,0 +1,21 @@
+id: '16998771019900.13514451421231355'
+name: content
+children:
+  - id: '16998771019910.300025680977865'
+    definitionId: layoutHeader
+    parentSlotId: '16998771019900.13514451421231355'
+    styles: {}
+    properties:
+      name: layoutHeader
+      __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+        - xl
+        - xs
+    index: 0
+    slots:
+      - id: '16998771019910.7410836844973498'
+        name: content
+        children:
+          - components/contextMenuButton.yml
+          - components/horizontalMenu.yml
+          - components/notificationsContextMenu.yml
+          - components/messagesContextMenu.yml
