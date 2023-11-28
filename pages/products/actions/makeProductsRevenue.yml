@@ -1,0 +1,56 @@
+id: '16999036108940.4408089208896824'
+kind: workflow
+name: makeProductsRevenue
+nameConfigured: true
+steps:
+  - id: '16999063507040.8101306869411204'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: >-
+          const [products, orderDetails] = await
+          Promise.all([{{actions.loadProducts.trigger()}},
+          {{actions.loadOrderDetails.trigger()}}]);
+
+
+          const productQuantities = orderDetails.reduce((histogram, {
+          PRODUCT_ID, QUANTITY }) => {
+            histogram[PRODUCT_ID] = (histogram[PRODUCT_ID] ?? 0) + QUANTITY;
+            return histogram;
+          }, {});
+
+
+          return products.map(({ PRODUCT_ID, UNIT_PRICE }) => ({
+            id: PRODUCT_ID,
+            boughtQuantity: productQuantities[PRODUCT_ID] ?? 0,
+            revenue: (productQuantities[PRODUCT_ID] ?? 0) * UNIT_PRICE,
+          }));
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '16995289137750.6080597777014727'
+parentId: null
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.makeProductsRevenue.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.makeProductsRevenue.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.makeProductsRevenue.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+index: 10
