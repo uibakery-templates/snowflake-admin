@@ -15,7 +15,7 @@ styles:
       w: 24
       h: 27
 properties:
-  data: '{{actions.loadProductsRevenue.data}}'
+  data: '{{actions.makeProductsRevenue.data}}'
   name: productMetric2
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
@@ -25,7 +25,7 @@ properties:
   groupType: not_group
   showLoading:
     withData: true
-    dataValue: '{{actions.loadProductsRevenue.loading}}'
+    dataValue: '{{actions.makeProductsRevenue.loading}}'
     value: false
 actions: {}
 slots:
