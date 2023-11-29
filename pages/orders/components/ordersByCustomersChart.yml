@@ -58,7 +58,9 @@ properties:
       disabled: false
       disableColors: true
       disabledTooltip: ''
-      formatter: '{{x}} products ordered {{y}} customer{{y > 1 ? ''s'': ''''}}'
+      formatter: >-
+        {{`${y} customer${y > 1 ? 's' : ''} ${x > 0 ? `ordered ${x} products` :
+        'have no orders'}`}}
   showLoading:
     value: false
     dataValue: >-
