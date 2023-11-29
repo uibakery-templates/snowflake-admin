@@ -25,9 +25,9 @@ slots:
     name: header
     children:
       - customerDetailsModal/customerDetailsModal.yml
-      - customersPopupform.yml
-      - heading3.yml
-      - input.yml
+      - customerPopupForm.yml
+      - customersTableHeading.yml
+      - searchCustomerName.yml
   - id: '16998773436070.7690763390876079'
     name: footer
     children: []

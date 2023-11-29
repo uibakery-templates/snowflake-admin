@@ -3,13 +3,10 @@ kind: workflow
 name: onCustomerCreate
 nameConfigured: true
 steps:
-  - id: '16996265716930.3019906142855697'
+  - id: '17012752928560.8561438933758945'
     type: CREATE_ENTITY
     name: create
     params:
-      - type: datasourceId
-        value: UIBAKERY SNOWFLAKE ADMIN database
-        valueType: string
       - type: resourceId
         value: CUSTOMERS
         valueType: string
@@ -18,7 +15,7 @@ steps:
           mode: custom
           valueByMode:
             structured: {}
-            custom: '{{ui.customersPopupform.value}}'
+            custom: '{{ui.customerPopupForm.value}}'
         valueType: custom
       - type: customDatabaseName
         value: ''
@@ -32,9 +29,13 @@ steps:
       - type: mapperEnabled
         value: false
         valueType: custom
+      - type: datasourceId
+        value: '[Sample] Snowflake DB'
+        valueType: custom
     level: 0
     fallthroughError: false
     isChanged: true
+    nameConfigured: true
 mode: manual
 modeConfigured: true
 config:
@@ -45,9 +46,9 @@ config:
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.onCustomerCreate.name}}" has failed
+  errorToast: Connect your own data source to be able to write data.
   errorToastDuration: '3000'
-  errorToastHideByClick: false
+  errorToastHideByClick: true
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: false

@@ -15,7 +15,7 @@ styles:
       w: 24
       h: 66
 properties:
-  name: map
+  name: customerMap
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs
@@ -23,9 +23,9 @@ properties:
   points: |-
     [
       {
-        latitude: Number({{ui.customersTable.clickedRow.data.LATITUDE}}),
-        longitude: Number({{ui.customersTable.clickedRow.data.LONGITUDE}}),
-        text: [{{ui.customersTable.clickedRow.data.FIRSTNAME}}, {{ui.customersTable.clickedRow.data.LASTNAME}}].join(' '),
+        latitude: {{ui.customersTable.clickedRow.data.LATITUDE}},
+        longitude: {{ui.customersTable.clickedRow.data.LONGITUDE}},
+        text: `${{{ui.customersTable.clickedRow.data.FIRST_NAME}}} ${{{ui.customersTable.clickedRow.data.LAST_NAME}}}`,
         icon: 'person',
       },
     ]

@@ -44,12 +44,12 @@ slots:
   - id: '16996087491660.8942995033239556'
     name: header
     children:
-      - heading2.yml
+      - customerDetailsHeading.yml
   - id: '16996087491660.7718317327335082'
     name: body
     children:
       - customerstableDetail.yml
-      - map.yml
+      - customerMap.yml
   - id: '16996087491660.4858403608765347'
     name: footer
     children: []

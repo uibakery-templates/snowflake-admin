@@ -3,15 +3,12 @@ kind: workflow
 name: onDeliveryCreate
 nameConfigured: true
 steps:
-  - id: '16996288108960.09113860083564118'
+  - id: '17012756125600.5077388409495622'
     type: CREATE_ENTITY
     name: create
     params:
-      - type: datasourceId
-        value: UIBAKERY SNOWFLAKE ADMIN database
-        valueType: string
       - type: resourceId
-        value: DELIVERY
+        value: DELIVERIES
         valueType: string
       - type: entity
         value:
@@ -32,9 +29,13 @@ steps:
       - type: mapperEnabled
         value: false
         valueType: custom
+      - type: datasourceId
+        value: '[Sample] Snowflake DB'
+        valueType: custom
     level: 0
     fallthroughError: false
     isChanged: true
+    nameConfigured: true
 mode: manual
 modeConfigured: true
 parentPageId: '16996198501970.3362767496195198'
@@ -46,9 +47,9 @@ config:
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.onDeliveryCreate.name}}" has failed
+  errorToast: Connect your own data source to be able to write data.
   errorToastDuration: '3000'
-  errorToastHideByClick: false
+  errorToastHideByClick: true
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: false

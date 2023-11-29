@@ -13,7 +13,7 @@ styles:
       x: 0
       y: 225
       w: 24
-      h: 74
+      h: 89
 properties:
   name: ordersByCutomersTree
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:

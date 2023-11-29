@@ -3,13 +3,10 @@ kind: workflow
 name: onProductCreate
 nameConfigured: true
 steps:
-  - id: '16996286397510.6464075262587294'
+  - id: '17012756587860.3143005800591596'
     type: CREATE_ENTITY
     name: create
     params:
-      - type: datasourceId
-        value: UIBAKERY SNOWFLAKE ADMIN database
-        valueType: string
       - type: resourceId
         value: PRODUCTS
         valueType: string
@@ -32,9 +29,13 @@ steps:
       - type: mapperEnabled
         value: false
         valueType: custom
+      - type: datasourceId
+        value: '[Sample] Snowflake DB'
+        valueType: custom
     level: 0
     fallthroughError: false
     isChanged: true
+    nameConfigured: true
 mode: manual
 modeConfigured: true
 parentPageId: '16995289137750.6080597777014727'
@@ -46,9 +47,9 @@ config:
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.onProductCreate.name}}" has failed
+  errorToast: Connect your own data source to be able to write data.
   errorToastDuration: '3000'
-  errorToastHideByClick: false
+  errorToastHideByClick: true
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: false
