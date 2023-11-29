@@ -26,7 +26,7 @@ slots:
   - id: '16995194319010.30764864124726876'
     name: header
     children:
-      - heading.yml
+      - overviewHeading.yml
   - id: '16995194319010.8917146684903667'
     name: footer
     children: []

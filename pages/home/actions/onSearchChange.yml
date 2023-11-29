@@ -3,7 +3,7 @@ kind: workflow
 name: onSearchChange
 nameConfigured: true
 steps:
-  - id: '16998911688640.8356129080124615'
+  - id: '17012757258250.6314746638235553'
     type: customSQLQuery
     name: query
     params:
@@ -14,14 +14,10 @@ steps:
           from
             CUSTOMERS
           WHERE
-            (FIRST_NAME LIKE {{'%'+ui.input.value+'%'}})
-            or (LAST_NAME LIKE {{'%'+ui.input.value+'%'}});
+            (FIRST_NAME LIKE {{'%'+ui.searchCustomerName.value+'%'}})
+            or (LAST_NAME LIKE {{'%'+ui.searchCustomerName.value+'%'}});
         valueType: interpolatedValue
         interpolationType: string
-      - type: datasourceId
-        value: UIBAKERY SNOWFLAKE ADMIN database
-        valueType: custom
-        mustSelectFirst: true
       - type: preparedQuery
         value: |-
           SELECT
@@ -34,8 +30,8 @@ steps:
         valueType: interpolatedValue
       - type: preparedQueryParams
         value:
-          - __UI_BAKERY__FORMAT_IF_DATE__('%'+ui.input.value+'%')
-          - __UI_BAKERY__FORMAT_IF_DATE__('%'+ui.input.value+'%')
+          - __UI_BAKERY__FORMAT_IF_DATE__('%'+ui.searchCustomerName.value+'%')
+          - __UI_BAKERY__FORMAT_IF_DATE__('%'+ui.searchCustomerName.value+'%')
         valueType: custom
       - type: customDatabaseName
         value: ''
@@ -52,9 +48,13 @@ steps:
       - type: mapperEnabled
         value: false
         valueType: custom
+      - type: datasourceId
+        value: '[Sample] Snowflake DB'
+        valueType: custom
     level: 0
     fallthroughError: false
     isChanged: true
+    nameConfigured: true
   - id: '16998915932070.8243908457497469'
     type: customAsyncCode
     name: code

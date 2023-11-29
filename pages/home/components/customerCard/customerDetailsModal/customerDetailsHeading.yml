@@ -1,4 +1,4 @@
-id: '16998773436070.5460730066185528'
+id: '16996087491660.9353570902812247'
 definitionId: heading
 styles:
   xl:
@@ -9,22 +9,22 @@ styles:
     gridItem:
       x: 0
       y: 0
-      w: 5
+      w: 9
       h: 10
   xs:
     gridItem:
       x: 0
       y: 0
-      w: 6
+      w: 15
       h: 10
 properties:
-  name: heading3
-  text: Customers
+  name: customerDetailsHeading
+  text: Customer Details
   verticalAlignment: middle
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs
-parentSlotId: '16998773436070.30835773092530694'
+parentSlotId: '16996087491660.8942995033239556'
 index: 0
 actions: {}
 slots: []

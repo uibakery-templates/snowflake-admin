@@ -25,8 +25,8 @@ slots:
             name: content
             children:
               - components/productsTable.yml
-              - components/productsChart2.yml
+              - components/bestSellingProductsChart.yml
               - components/productsModal/productsModal.yml
-              - components/productChart.yml
-              - components/productMetric.yml
-              - components/productMetric2.yml
+              - components/revenueByProductChart.yml
+              - components/totalRevenueMetric.yml
+              - components/averageRevenueMetric.yml

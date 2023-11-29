@@ -27,5 +27,5 @@ slots:
               - components/deliveriesTable.yml
               - components/deliveriesMetric.yml
               - components/deliveriesModal/deliveriesModal.yml
-              - components/deliveriesChart.yml
-              - components/deliveriesMetric2.yml
+              - components/deliveriesByDayChart.yml
+              - components/latestDeliveryMetric.yml

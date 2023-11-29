@@ -11,7 +11,7 @@ styles:
   xs:
     gridItem:
       x: 11
-      y: 129
+      y: 102
       w: 13
       h: 27
 properties:
@@ -22,7 +22,7 @@ properties:
 
     return {{actions.loadCustomers.data}}.map(({ CUSTOMER_ID }) => ({
     CUSTOMER_ID, orderCount: customerOrders[CUSTOMER_ID]?.length ?? 0 }));
-  name: ordersMetric2
+  name: averageOrderCountMetric
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs

@@ -28,6 +28,6 @@ slots:
               - components/ordersTotalsChart.yml
               - components/ordersByCutomersTree.yml
               - components/ordersByCustomersChart.yml
-              - components/orderDetailsMetric2.yml
-              - components/ordersMetric2.yml
-              - components/orderDetailsMetric.yml
+              - components/averageProductQuantityMetric.yml
+              - components/averageOrderCountMetric.yml
+              - components/productQuantityMetric.yml

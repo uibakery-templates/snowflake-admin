@@ -263,7 +263,7 @@ slots:
                   color: 'danger-light'
                 }
               ]
-            withData: false
+            withData: true
           __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
             - xl
             - xs
@@ -274,6 +274,7 @@ slots:
             value: true
             dataValue: 'true'
             withData: false
+          mappedColor: info-dark
         index: 7
         slots: []
       - id: '17000629883420.47998947787097057'

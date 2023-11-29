@@ -14,5 +14,5 @@ slots:
     name: content
     children:
       - homePageBubbleMap.yml
-      - deliveryChart3.yml
-      - deliveryChart2.yml
+      - lastWeekDeliveryChart.yml
+      - lastDayDeliveryChart.yml

@@ -16,7 +16,7 @@ styles:
       h: 27
 properties:
   data: '{{actions.loadDeliveries.data}}'
-  name: deliveriesMetric2
+  name: latestDeliveryMetric
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs

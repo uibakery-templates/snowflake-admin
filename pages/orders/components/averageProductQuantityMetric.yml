@@ -11,7 +11,7 @@ styles:
   xs:
     gridItem:
       x: 11
-      y: 102
+      y: 129
       w: 13
       h: 27
 properties:
@@ -21,7 +21,7 @@ properties:
       ORDER_ID,
       QUANTITY: details.reduce((accumulator, { QUANTITY }) => accumulator + QUANTITY, 0),
     }));
-  name: orderDetailsMetric2
+  name: averageProductQuantityMetric
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs
