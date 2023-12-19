@@ -25,7 +25,7 @@ properties:
       {
         latitude: {{ui.customersTable.clickedRow.data.LATITUDE}},
         longitude: {{ui.customersTable.clickedRow.data.LONGITUDE}},
-        text: [{{ui.customersTable.clickedRow.data.FIRST_NAME}}, {{ui.customersTable.clickedRow.data.FIRST_NAME}}].filter(Boolean).join(' '),
+        text: [{{ui.customersTable.clickedRow.data.FIRST_NAME}}, {{ui.customersTable.clickedRow.data.LAST_NAME}}].filter(Boolean).join(' '),
         icon: 'person',
       },
     ]
