@@ -1,0 +1,1 @@
+{{ui.customersTable.setData(data)}}

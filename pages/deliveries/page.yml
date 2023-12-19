@@ -4,7 +4,6 @@ url: deliveries
 roleIds: []
 disableInMenu: false
 parentPageId: null
-index: 3
 slots:
   - id: '16996198501980.24331817276141443'
     name: content

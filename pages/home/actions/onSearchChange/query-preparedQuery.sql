@@ -1,0 +1,7 @@
+SELECT
+  *
+from
+  CUSTOMERS
+WHERE
+  (FIRST_NAME LIKE ?)
+  or (LAST_NAME LIKE ?);

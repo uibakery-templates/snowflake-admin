@@ -8,7 +8,7 @@ steps:
     name: code
     params:
       - type: asyncCode
-        value: '{{ui.deliveriesModal.open()}}'
+        value: ./code.js
         valueType: interpolatedValue
         interpolationType: code
     level: 0
@@ -35,4 +35,3 @@ config:
   preserveStateOnPageChange: false
 selected: true
 configured: true
-index: 11

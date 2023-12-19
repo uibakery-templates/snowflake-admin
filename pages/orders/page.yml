@@ -4,7 +4,6 @@ url: orders
 roleIds: []
 disableInMenu: false
 parentPageId: null
-index: 1
 slots:
   - id: '16995304860760.19521958342983292'
     name: content

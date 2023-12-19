@@ -1,14 +1,14 @@
-id: '16996138251620.1381775022793379'
+id: '16996336752970.6844293068346621'
 kind: workflow
-name: loadProducts
+name: loadOrderDetails
 nameConfigured: true
 steps:
-  - id: '17011893378430.047121872924230424'
+  - id: '17011892877890.5168865807097884'
     type: LOAD_COLLECTION
     name: load
     params:
       - type: resourceId
-        value: PRODUCTS
+        value: ORDER_DETAILS
         valueType: string
       - type: filters
         value: []
@@ -50,19 +50,19 @@ steps:
     nameConfigured: true
 mode: manual
 modeConfigured: false
-parentPageId: '16995289137750.6080597777014727'
 config:
   shouldConfirm: false
-  confirmMessage: Are you sure you'd like to proceed with "{{actions.loadProducts.name}}"?
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.loadOrderDetails.name}}"?
   showSuccessToast: false
-  successToast: Action "{{actions.loadProducts.name}}" successfully executed
+  successToast: Action "{{actions.loadOrderDetails.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.loadProducts.name}}" has failed
+  errorToast: Action "{{actions.loadOrderDetails.name}}" has failed
   errorToastDuration: '3000'
   errorToastHideByClick: false
   delay: '0'
   runWhenFirstReferenced: true
-  preserveStateOnPageChange: false
-index: 7
+  preserveStateOnPageChange: true
+selected: true
+configured: true

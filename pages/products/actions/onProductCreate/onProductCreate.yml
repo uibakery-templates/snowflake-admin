@@ -1,21 +1,17 @@
-id: '16996288059150.7623730851420472'
+id: '16996286332130.19307539295029286'
 kind: workflow
-name: onDeliveryCreate
+name: onProductCreate
 nameConfigured: true
 steps:
-  - id: '17012756125600.5077388409495622'
+  - id: '17012756587860.3143005800591596'
     type: CREATE_ENTITY
     name: create
     params:
       - type: resourceId
-        value: DELIVERIES
+        value: PRODUCTS
         valueType: string
       - type: entity
-        value:
-          mode: custom
-          valueByMode:
-            structured: {}
-            custom: '{{ui.deliveriesTable.newRow.data}}'
+        value: ./create-entity.yml
         valueType: custom
       - type: customDatabaseName
         value: ''
@@ -38,12 +34,12 @@ steps:
     nameConfigured: true
 mode: manual
 modeConfigured: true
-parentPageId: '16996198501970.3362767496195198'
+parentPageId: '16995289137750.6080597777014727'
 config:
   shouldConfirm: false
-  confirmMessage: Are you sure you'd like to proceed with "{{actions.onDeliveryCreate.name}}"?
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.onProductCreate.name}}"?
   showSuccessToast: false
-  successToast: Action "{{actions.onDeliveryCreate.name}}" successfully executed
+  successToast: Action "{{actions.onProductCreate.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
@@ -55,4 +51,3 @@ config:
   preserveStateOnPageChange: false
 selected: true
 configured: true
-index: 12

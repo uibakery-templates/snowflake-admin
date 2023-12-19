@@ -1,33 +1,17 @@
-id: '16996172573340.320082590186038'
+id: '16996265585920.4373256608976672'
 kind: workflow
-name: loadOrders
+name: onCustomerCreate
 nameConfigured: true
 steps:
-  - id: '17011892608090.8356441097971219'
-    type: LOAD_COLLECTION
-    name: load
+  - id: '17012752928560.8561438933758945'
+    type: CREATE_ENTITY
+    name: create
     params:
       - type: resourceId
-        value: ORDERS
+        value: CUSTOMERS
         valueType: string
-      - type: filters
-        value: []
-        valueType: custom
-      - type: ordering
-        value:
-          limit:
-            value: ''
-          offset:
-            value: ''
-          orderBy:
-            value: ''
-          orderDirection:
-            value: asc
-        valueType: custom
-      - type: additionalParams
-        value:
-          - name: ''
-            value: ''
+      - type: entity
+        value: ./create-entity.yml
         valueType: custom
       - type: customDatabaseName
         value: ''
@@ -49,19 +33,21 @@ steps:
     isChanged: true
     nameConfigured: true
 mode: manual
-modeConfigured: false
+modeConfigured: true
 config:
   shouldConfirm: false
-  confirmMessage: Are you sure you'd like to proceed with "{{actions.loadOrders.name}}"?
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.onCustomerCreate.name}}"?
   showSuccessToast: false
-  successToast: Action "{{actions.loadOrders.name}}" successfully executed
+  successToast: Action "{{actions.onCustomerCreate.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.loadOrders.name}}" has failed
+  errorToast: Connect your own data source to be able to write data.
   errorToastDuration: '3000'
-  errorToastHideByClick: false
+  errorToastHideByClick: true
   delay: '0'
   runWhenFirstReferenced: true
-  preserveStateOnPageChange: true
-index: 2
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+parentPageId: '1'
