@@ -1,21 +1,33 @@
-id: '16996265585920.4373256608976672'
+id: '16996172573340.320082590186038'
 kind: workflow
-name: onCustomerCreate
+name: loadOrders
 nameConfigured: true
 steps:
-  - id: '17012752928560.8561438933758945'
-    type: CREATE_ENTITY
-    name: create
+  - id: '17011892608090.8356441097971219'
+    type: LOAD_COLLECTION
+    name: load
     params:
       - type: resourceId
-        value: CUSTOMERS
+        value: ORDERS
         valueType: string
-      - type: entity
+      - type: filters
+        value: []
+        valueType: custom
+      - type: ordering
         value:
-          mode: custom
-          valueByMode:
-            structured: {}
-            custom: '{{ui.customerPopupForm.value}}'
+          limit:
+            value: ''
+          offset:
+            value: ''
+          orderBy:
+            value: ''
+          orderDirection:
+            value: asc
+        valueType: custom
+      - type: additionalParams
+        value:
+          - name: ''
+            value: ''
         valueType: custom
       - type: customDatabaseName
         value: ''
@@ -37,22 +49,18 @@ steps:
     isChanged: true
     nameConfigured: true
 mode: manual
-modeConfigured: true
+modeConfigured: false
 config:
   shouldConfirm: false
-  confirmMessage: Are you sure you'd like to proceed with "{{actions.onCustomerCreate.name}}"?
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.loadOrders.name}}"?
   showSuccessToast: false
-  successToast: Action "{{actions.onCustomerCreate.name}}" successfully executed
+  successToast: Action "{{actions.loadOrders.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Connect your own data source to be able to write data.
+  errorToast: Action "{{actions.loadOrders.name}}" has failed
   errorToastDuration: '3000'
-  errorToastHideByClick: true
+  errorToastHideByClick: false
   delay: '0'
   runWhenFirstReferenced: true
-  preserveStateOnPageChange: false
-selected: true
-configured: true
-parentPageId: '1'
-index: 4
+  preserveStateOnPageChange: true

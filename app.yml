@@ -15,6 +15,7 @@ metadata:
     </style>
   title: Snowflake Admin
   description: ''
+  breakpoints: []
 appSettings:
   properties:
     defaultData: '{}'

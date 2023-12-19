@@ -27,5 +27,9 @@ properties:
       longitude: customer.LONGITUDE,
     }));
   title: Customers around the World
+  showLoading:
+    value: false
+    dataValue: '{{actions.loadCustomers.loading}}'
+    withData: true
 actions: {}
 slots: []

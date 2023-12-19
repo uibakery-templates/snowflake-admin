@@ -1,14 +1,14 @@
-id: '16996068544190.09804616390278054'
+id: '17000631362170.8752637125268057'
 kind: workflow
-name: loadCustomers
+name: loadDeliveries
 nameConfigured: true
 steps:
-  - id: '17011892106630.8260765184914263'
+  - id: '17011891741300.38168277065221745'
     type: LOAD_COLLECTION
     name: load
     params:
       - type: resourceId
-        value: CUSTOMERS
+        value: DELIVERIES
         valueType: string
       - type: filters
         value: []
@@ -20,7 +20,7 @@ steps:
           offset:
             value: ''
           orderBy:
-            value: ''
+            value: DELIVERY_DATE
           orderDirection:
             value: asc
         valueType: custom
@@ -52,18 +52,15 @@ mode: manual
 modeConfigured: false
 config:
   shouldConfirm: false
-  confirmMessage: Are you sure you'd like to proceed with "{{actions.loadCustomers.name}}"?
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.loadDeliveries.name}}"?
   showSuccessToast: false
-  successToast: Action "{{actions.loadCustomers.name}}" successfully executed
+  successToast: Action "{{actions.loadDeliveries.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.loadCustomers.name}}" has failed
+  errorToast: Action "{{actions.loadDeliveries.name}}" has failed
   errorToastDuration: '3000'
   errorToastHideByClick: false
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: true
-selected: true
-configured: false
-index: 1
