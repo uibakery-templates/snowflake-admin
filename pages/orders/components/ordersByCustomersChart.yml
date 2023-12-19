@@ -35,32 +35,45 @@ properties:
     }, {});
 
 
-    return {{actions.loadCustomers.data}}.map(({ CUSTOMER_ID }) => ({
+    const customerProductQuantities = {{actions.loadCustomers.data}}.map(({
+    CUSTOMER_ID }) => ({
       id: CUSTOMER_ID,
       productQuantity: customerQuantities[CUSTOMER_ID] ?? 0,
     }));
+
+
+    const productQuantityGroupedByDozen =
+    Object.groupBy(customerProductQuantities, ({ productQuantity }) =>
+    Math.floor(productQuantity / 10));
+
+
+    return Object.entries(productQuantityGroupedByDozen).map(([dozen, bin]) => {
+      dozen = Number(dozen);
+      return {
+        customerCount: new Set(bin.map(({ id }) => id)).size,
+        productQuantityRange: `${10 * dozen}-${10 * (dozen + 1) - 1}`,
+      };
+    });
   config: "return {\n \ttitle: {\n    text: 'Weekly Traffic',\n    padding: 10\n  },\n  tooltip: {\n    trigger: 'axis',\n    axisPointer: {\n      type: 'cross',\n      label: {\n      }\n    }\n  },\n  legend: {\n    data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine'],\n    padding: 30\n  },\n  grid: {\n    left: '3%',\n    right: '4%',\n    bottom: '3%',\n    containLabel: true\n  },\n  xAxis: [\n    {\n      type: 'category',\n      boundaryGap: false,\n      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']\n    }\n  ],\n  yAxis: [\n    {\n      type: 'value'\n    }\n  ],\n  series: [\n    {\n      name: 'Email',\n      type: 'line',\n      stack: 'Total',\n      areaStyle: {},\n      emphasis: {\n        focus: 'series'\n      },\n      data: [120, 132, 101, 134, 90, 230, 210]\n    },\n    {\n      name: 'Union Ads',\n      type: 'line',\n      stack: 'Total',\n      areaStyle: {},\n      emphasis: {\n        focus: 'series'\n      },\n      data: [220, 182, 191, 234, 290, 330, 310]\n    },\n    {\n      name: 'Video Ads',\n      type: 'line',\n      stack: 'Total',\n      areaStyle: {},\n      emphasis: {\n        focus: 'series'\n      },\n      data: [150, 232, 201, 154, 190, 330, 410]\n    },\n    {\n      name: 'Direct',\n      type: 'line',\n      stack: 'Total',\n      areaStyle: {},\n      emphasis: {\n        focus: 'series'\n      },\n      data: [320, 332, 301, 334, 390, 330, 320]\n    },\n    {\n      name: 'Search Engine',\n      type: 'line',\n      stack: 'Total',\n      areaStyle: {},\n      emphasis: {\n        focus: 'series'\n      },\n      data: [820, 932, 901, 934, 1290, 1330, 1320]\n    }\n  ]\n};"
   name: ordersByCustomersChart
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs
   title: Product quantity by customer
-  type: pieChart
+  type: barChart
   structure:
-    - title: Product quantity
+    - title: Product quantity by customer
       data: []
       color: primary
-      xProp: productQuantity
-      yProp: id
+      xProp: productQuantityRange
+      yProp: customerCount
       __UIBAKERY__SYSTEM_ID__: '17001225069400.46701679304327115'
       groupType: value
-      groupFunctionType: count
+      groupFunctionType: show_last
       disabled: false
       disableColors: true
       disabledTooltip: ''
-      formatter: >-
-        {{`${y} customer${y > 1 ? 's' : ''} ${x > 0 ? `ordered ${x} products` :
-        'have no orders'}`}}
+      formatter: '{{`${y} customer${y > 1 ? ''s'' : ''''} ordered ${x} products`}}'
   showLoading:
     value: false
     dataValue: >-
