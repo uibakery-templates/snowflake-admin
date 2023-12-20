@@ -6,8 +6,8 @@ styles:
     gridItem:
       x: 0
       y: 0
-      w: 11
-      h: 118
+      w: 8
+      h: 136
   xs:
     gridItem:
       x: 0
@@ -53,6 +53,7 @@ properties:
       padding: default
       shadow: default
       border: default
+  heightMode: auto
 actions: {}
 slots:
   - id: '16996089893140.6004658429701879'
