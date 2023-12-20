@@ -7,10 +7,10 @@ styles:
       x: 19
       y: 0
       w: 5
-      h: 10
+      h: 9
     buttonIconPlacement: left
     modalSize:
-      widthValue: 60
+      widthValue: 50
       widthUnit: '%'
       heightValue: auto
       heightUnit: '-'

@@ -7,12 +7,12 @@ styles:
       x: 8
       y: 0
       w: 2
-      h: 10
+      h: 9
     modalSize:
       widthValue: 80
       widthUnit: '%'
-      heightValue: 80
-      heightUnit: '%'
+      heightValue: auto
+      heightUnit: null
       minWidthValue: 0
       minWidthUnit: px
       minHeightValue: 0

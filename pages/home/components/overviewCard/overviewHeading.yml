@@ -3,13 +3,13 @@ definitionId: heading
 styles:
   xl:
     fontSize:
-      customValue: 14
+      customValue: 12
       customUnit: px
     gridItem:
       x: 0
       y: 0
-      w: 6
-      h: 10
+      w: 11
+      h: 9
   xs:
     gridItem:
       x: 0
@@ -28,7 +28,7 @@ properties:
     value: none
     dataValue: none
     withData: false
-  type: h1
+  type: h5
 parentSlotId: '16995194319010.30764864124726876'
 index: 0
 actions: {}
